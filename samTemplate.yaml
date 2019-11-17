@@ -1,0 +1,23 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: BioBeat CICD Demo Lambda
+Resources:
+  CICDDemoLambda:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: lambda_function.lambda_handler
+      Runtime: python3.6
+      CodeUri: ./LambdaCode
+      Description: 'BioBeat Lambda function for CICD Demo'
+      MemorySize: 128
+      Timeout: 30
+      Role: 'arn:aws:iam::431631213879:role/biobeat-cicd-lambda-function-role'
+      Events:
+        getAZsAPI:
+          Type: Api
+          Properties:
+            Path: /getazs
+            Method: get
+      Environment:
+        Variables:
+          REGION: eu-west-1
