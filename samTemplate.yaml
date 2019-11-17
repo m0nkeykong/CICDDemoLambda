@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: 'AWS::Serverless-2016-10-31'
-Description: BioBeat CICD Demo Lambda
+Description: BioBeat CICD Demo Lambda - Staging to Production
 Resources:
   CICDDemoLambda:
     Type: 'AWS::Serverless::Function'
@@ -11,7 +11,7 @@ Resources:
       Description: 'BioBeat Lambda function for CICD Demo'
       MemorySize: 128
       Timeout: 30
-      Role: 'arn:aws:iam::431631213879:role/biobeat-cicd-lambda-function-role'
+      Role: 'arn:aws:iam::323619664567:role/biobeat-cicd-lambda-function-role'
       Events:
         getAZsAPI:
           Type: Api
