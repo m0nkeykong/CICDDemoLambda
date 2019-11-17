@@ -2,7 +2,7 @@ version: 0.1
 phases:
   install:
     runtime-versions:
-      python: 3.7
+      python: 3.7.0
     commands:
       - aws cloudformation package --template-file samTemplate.yaml --s3-bucket biobeat-staging-cicd-bucket --output-template-file outputSamTemplate.yaml
 artifacts:
