@@ -11,7 +11,6 @@ Resources:
       Description: 'BioBeat Lambda function for CICD Demo'
       MemorySize: 128
       Timeout: 30
-      Role: 'arn:aws:iam::431631213879:role/biobeat-cicd-lambda-function-role'
       Events:
         getAZsAPI:
           Type: Api
