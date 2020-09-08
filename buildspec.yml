@@ -4,7 +4,7 @@ phases:
     runtime-versions:
       python: 3.7
     commands:
-      - aws cloudformation package --template-file samTemplate.yaml --s3-bucket biobeat-staging-cicd-bucket --output-template-file outputSamTemplate.yaml
+      - aws cloudformation package --template-file samTemplate.yaml --s3-bucket /codepipeline-ap-southeast-2-611417683495 --output-template-file outputSamTemplate.yaml
 artifacts:
   type: zip
   files:
