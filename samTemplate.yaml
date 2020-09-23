@@ -1,8 +1,9 @@
 AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
 Description: CICD Test
 Resources:
   TestFunction1:
-    Type: 'AWS::Lambda::Function'
+    Type: 'AWS::Serverless::Function'
     Properties:
       FunctionName: 'test_function_1'
       Handler: lambda_function.lambda_handler
